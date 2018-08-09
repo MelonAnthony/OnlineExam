@@ -1,0 +1,120 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>OnlineExam</title>
+<link href="static/css/main.css" rel="stylesheet" type="text/css" />
+<link href="static/css/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="static/css/test.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="main">
+		<!--nr start-->
+		<div class="test_main">
+			<div class="nr_left">
+				<div class="test">
+
+					<div class="test_start" id="startEx">
+						<i class="icon iconfont">&#xe6fb;</i>全卷测试 <font><input
+							type="button" name="test" onclick="startExam()" value="开始考试" /></font>
+					</div>
+
+					<div class="test_start" id="examResult" hidden="true">
+						<i class="icon iconfont">&#xe6fb;</i>考试结果
+					</div>
+					<div id="graphShow"
+						style="display: none; width: 900px; height: 600px; position: fixed; top: 85px; z-index: 1000;"
+						hidden="true"></div>
+					<div class="test_title" hidden="true">
+						<font><input type="button" onclick="submitMission()"
+							name="test_jiaojuan" value="交卷"></font>
+					</div>
+					<!-- 单选题Title -->
+					<div class="test_content" hidden="true">
+						<div class="test_content_title" id="MulChosQuesTitle"></div>
+					</div>
+					<!-- 单选题Content -->
+					<div class="test_content_nr" hidden="true">
+						<ul id="MulChosQuesContent">
+						</ul>
+					</div>
+
+					<!-- 判断题  title -->
+					<div class="test_content" hidden="true">
+						<div class="test_content_title" id="TorFQuesTitle"></div>
+					</div>
+					<!-- 判断题内容 content -->
+					<div class="test_content_nr" hidden="true">
+						<ul id="TorFQuesContent">
+
+
+
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			<!-- 右边部分 -->
+			<div class="nr_right">
+				<div class="nr_rt_main">
+					<div class="rt_nr1">
+						<div class="rt_nr1_title">
+							<h1>
+								<i class="icon iconfont">&#xe692;</i>试题导航
+							</h1>
+							<div class="imgdiv">
+								<img src="static/img/time.png" class="imgtype"/>
+								<span class="glyphicon glyphicon-time" aria-hidden="true"></span>&nbsp;&nbsp;<span id="timer" class="timer-simple-seconds" timer="7200"><span class="hour">02</span>:<span class="minute">00</span>:<span class="second">00</span>
+								
+							</div>
+						</div>
+
+						<div class="rt_content">
+							<div class="rt_content_tt">
+								<h2>单选题</h2>
+								<p>
+									<span>共</span><i class="content_lit">5</i><span>题</span>
+								</p>
+							</div>
+							<div class="rt_content_nr answerSheet">
+								<ul id="MulChoQuesAnsSheet">
+								</ul>
+							</div>
+						</div>
+
+						<div class="rt_content">
+							<div class="rt_content_tt">
+								<h2>选择题</h2>
+								<p>
+									<span>共</span><i class="content_lit">5</i><span>题</span>
+								</p>
+							</div>
+							<div class="rt_content_nr answerSheet">
+								<ul id="TorFansSheet">
+								</ul>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!--nr end-->
+		<div class="foot"></div>
+	</div>
+	<div style="text-align: center;"></div>
+</body>
+<script type='text/javascript' src='dwr/engine.js'></script>
+<script type='text/javascript' src='dwr/util.js'></script>
+<script type="text/javascript" src="dwr/interface/QuestionDwr.js"></script>
+<script src="static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="static/js/echarts.js"></script>
+<script type="text/javascript" src="static/js/Qiansion.js"></script>
+<script type="text/javascript" src="static/js/timer-simple-seconds.js"></script>
+<script type="text/javascript" src="static/js/myAlert.js"></script>
+</html>
